@@ -23161,3 +23161,38 @@ spec:
       app.kubernetes.io/name: argocd-server
   policyTypes:
   - Ingress
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubestronaut
+  namespace: argocd
+spec:
+  project: kubestronaut
+  source:
+    repoURL: 'https://gitlab.com/josuacastro/kubernetes-community-days.git'
+    targetRevision: main
+    path: '.'
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: kubestronaut
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: kubestronaut
+  namespace: argocd
+spec:
+  description: "Project for Kubestronaut"
+  sourceRepos:
+    - 'https://gitlab.com/josuacastro/kubernetes-community-days.git'  # Permite el repositorio específico
+  destinations:
+    - namespace: 'kubestronaut'
+      server: 'https://kubernetes.default.svc'  # Permite el destino específico
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
