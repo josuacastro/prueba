@@ -1,2 +1,0 @@
-https://raw.githubusercontent.com/josuacastro/prueba/main/ejercicio1/deployment.yaml
-https://raw.githubusercontent.com/josuacastro/prueba/main/ejercicio1/nginx.yaml
