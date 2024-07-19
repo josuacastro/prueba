@@ -1,3 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubestronaut
+  labels:
+    name: kubestronaut
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,7 +13,7 @@ metadata:
   labels:
     app: cka
 spec:
-  replicas:1
+  replicas: 1
   selector:
     matchLabels:
       app: cka
