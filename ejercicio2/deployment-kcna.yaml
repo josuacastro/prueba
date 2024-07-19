@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kcna
+  namespace: kubestronaut
+  labels:
+    app: kcna
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kcna
+  template:
+    metadata:
+      labels:
+        app: kcna
+    spec:
+      containers:
+      - name: kcna
+        image: roko1987/kcna
+        ports:
+        - containerPort: 8093

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kcsa
+  namespace: kubestronaut
+spec:
+  type: ClusterIP
+  selector:
+    app: kcsa
+  ports:
+    - protocol: TCP
+      port: 8094
+      targetPort: 8094

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ckad
+  namespace: kubestronaut
+  labels:
+    app: ckad
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ckad
+  template:
+    metadata:
+      labels:
+        app: ckad
+    spec:
+      containers:
+      - name: ckad
+        image: roko1987/ckad
+        ports:
+        - containerPort: 8091

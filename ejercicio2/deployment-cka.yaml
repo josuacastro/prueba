@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cka
+  namespace: kubestronaut
+  labels:
+    app: cka
+spec:
+  replicas:1
+  selector:
+    matchLabels:
+      app: cka
+  template:
+    metadata:
+      labels:
+        app: cka
+    spec:
+      containers:
+      - name: cka
+        image: roko1987/cka
+        ports:
+        - containerPort: 8091

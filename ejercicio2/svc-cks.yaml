@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cks
+  namespace: kubestronaut
+spec:
+  type: ClusterIP
+  selector:
+    app: cks
+  ports:
+    - protocol: TCP
+      port: 8092
+      targetPort: 8092

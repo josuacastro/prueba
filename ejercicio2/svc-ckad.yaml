@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ckad
+  namespace: kubestronaut
+spec:
+  type: ClusterIP
+  selector:
+    app: ckad
+  ports:
+    - protocol: TCP
+      port: 8091
+      targetPort: 8091

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubestronaut
+  namespace: kubestronaut
+  labels:
+    app: kubestronaut
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubestronaut
+  template:
+    metadata:
+      labels:
+        app: kubestronaut
+    spec:
+      containers:
+      - name: kubestronaut
+        image: roko1987/kubestronaut
+        ports:
+        - containerPort: 8095
