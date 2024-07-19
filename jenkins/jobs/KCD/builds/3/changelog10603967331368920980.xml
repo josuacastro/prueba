@@ -1,9 +1,0 @@
-commit 6acd58902b9205839bbb73abd5d24a375c1f5a0b
-tree cd3d45539cdfd0f3b6f89da48135791dd28fcbac
-parent 06bc56016aed62c702f7ffdc94b35ba76f9d8df6
-author josuacastro <josuacastrov@gmail.com> 2024-07-19 06:51:01 +0000
-committer josuacastro <josuacastrov@gmail.com> 2024-07-19 06:51:01 +0000
-
-    Update deployment.yaml
-
-:100644 100644 ca2af687d274e595ed45b842557e6b6071dcdf7f 9b2962be1757f87d213a4f0dd22a8d7b07cc117c M	deployment.yaml
